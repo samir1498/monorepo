@@ -1,4 +1,7 @@
 ---
+import { App } from "../components/react/App";
+import  AppSvelte  from "../components/svelte/TaskApp.svelte";
+
 
 ---
 
@@ -10,7 +13,14 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="grid grid-cols-2 items-center justify-center h-screen w-1/2 mx-auto">
+		<div class="flex flex-col items-center justify-center">
+			<span class="text-4xl">React App</span>
+			<App client:load/>
+		</div>
+		<div class="flex flex-col items-center justify-center ">
+			<span class="text-4xl">Svelte App</span>
+			<AppSvelte client:load/>
+		</div>
 	</body>
 </html>

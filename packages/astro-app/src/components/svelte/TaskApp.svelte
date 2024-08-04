@@ -1,8 +1,7 @@
 <script lang="ts">
-	import './app.css';
 	import { v4 as uuidv4 } from 'uuid';
-	import TaskList from "./components/TaskList.svelte";
-	import TaskInput from './components/TaskInput.svelte';
+	import TaskList from "./TaskList.svelte";
+	import TaskInput from './TaskInput.svelte';
 
   
 	let tasks: { id: string; name: string }[] = [];
@@ -16,7 +15,7 @@
 	};
   </script>
   
-  <div class="flex items-center justify-center h-screen"> 
+  <div class="flex items-center justify-center"> 
 	<div class="p-4 max-w-sm mx-auto bg-white rounded-xl shadow-md">
 
 		<h1 class="text-xl font-bold">To-Do List</h1>
